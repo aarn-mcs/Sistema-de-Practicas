@@ -34,6 +34,6 @@ class Message extends Mailable
     public function build()
     {
         $message = Input::all();
-        return $this->view('email.message')->with($message);
+        return $this->view('email.message')->with(['data' => $message]);
     }
 }
